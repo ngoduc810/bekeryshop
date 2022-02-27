@@ -18,9 +18,13 @@ const Navbar = () => {
     useEffect(() => {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${item}`)
         .then(res => res.json())
+        
         .then(data => {
             setMeal(data.meals)
         })
+        .catch(error => {
+            console.error('Error:', error);
+          });
     },[item]);
 
 
@@ -74,7 +78,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <Link to={'/navigation'} className="navbar__tab col-1">
-                    <i class="fa fa-list"></i>
+                    <i className="fa fa-list"></i>
                 </Link>
             </div>
         </div>

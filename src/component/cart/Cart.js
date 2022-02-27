@@ -16,7 +16,7 @@ function Cart() {
     return (
     <div className='container-xxl'>
             {items.map((item, index) => (
-                <div className='row cart'>
+                <div className='row cart' key={index}>
                     <div className='col-md-1 cart__item'>
                         {index + 1}
                     </div>
@@ -36,7 +36,7 @@ function Cart() {
                     <div className='col-md-1 cart__item'>
                         <i  
                             onClick={() => handerDelete(index)}
-                            class="cart__delete fa fa-trash"></i>
+                            className="cart__delete fa fa-trash"></i>
                     </div>
                 </div>
             ))}
