@@ -1,0 +1,22 @@
+/* mobile and tablet */
+
+@media only screen and (max-width: 1024px) {
+    .hide__on-tab {
+        display: none !important;
+    }
+    .navbar__tab {
+        display: flex !important;
+    }
+}
+
+@media only screen and (max-width: 739px) {
+    .navbar__tab {
+        font-size: 25px !important;
+    }
+}
+
+
+
+/* @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
+@media (min-width: @screen-lg-min) { ... } */
